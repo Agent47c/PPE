@@ -25,8 +25,8 @@ A real-time object detection and tracking system using YOLOv8 and StrongSort. Th
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
-cd <repository-name>
+git clone https://github.com/Agent47c/PPE.git
+cd PPE
 ```
 
 2. Install required dependencies:
@@ -35,8 +35,8 @@ pip install opencv-python torch ultralytics boxmot numpy
 ```
 
 3. Download the required models:
-   - Place your YOLOv8 model weights in the specified model path (e.g., `D://Testing_Models//FocalLoss//best.pt`)
-   - Download the StrongSort ReID weights from [BoxMOT](https://github.com/mikel-brostrom/yolo_tracking) and place them at `D:/PPE Detection/osnet_x0_25_msmt17.pt`
+   Download the YOLO Model [Drive](https://drive.google.com/file/d/18SDWwma-eCqGI-K8Iw9WQr9g9H7YJ8J2/view?usp=drive_link) and place them at `PPE/model.pt`
+   - Download the StrongSort ReID weights from [Drive](https://drive.google.com/file/d/1C0n8t-ATUEmBbC1vtMWIfFJKGTCJTbEi/view?usp=sharing) and place them at `PPE/osnet_x0_25_msmt17.pt`
 
 ## Usage
 
@@ -46,6 +46,13 @@ pip install opencv-python torch ultralytics boxmot numpy
 from ObjectTracking import Main_App
 
 # Initialize the application
+class ObjectTracker:
+    (      
+    reid_weights=Path("path"),
+    device="cpu",
+    half=False
+    )
+
 app = Main_App(
     Video_path="your_video.mp4",
     Model_path="path/to/your/model.pt",
