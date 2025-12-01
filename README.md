@@ -64,7 +64,7 @@ app.run()
 ```
 
 ### Parameters
-
+-**reid_weights** (str):Path to ReId Model of Strongsort
 - **Video_path** (str): Path to the input video file
 - **Model_path** (str): Path to the YOLOv8 model weights
 - **QueueSize** (int): Maximum size of processing queues for each pipeline stage
